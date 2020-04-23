@@ -1,0 +1,96 @@
+{% extends "dashboard/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <form method="POST"> {% csrf_token %}
+        <h1 class="hcolor">Add Candidate</h1>
+        <hr>
+        <div class="container">
+            <div class="form-group-inner"><br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Name</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_name|as_crispy_field}}
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Email</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_email|as_crispy_field}}
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Phone</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_phone|as_crispy_field}}
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Gender</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_gender|as_crispy_field}}
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Jobtitle</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_job_title|as_crispy_field}}
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Source</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_source|as_crispy_field}}
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group-inner">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label class="login2 pull-right pull-right-pro">Candidate Address</label>
+                    </div>
+                    <div class="col-lg-9">
+                        {{form.candidate_address|as_crispy_field}}
+                    </div>
+                </div>
+            </div><br>
+
+
+            <div>
+                <input type="submit" class="btn btn-primary col-md-12" value='save'>
+            </div><br>
+        </div>
+
+
+
+    </form>
+</div>
+
+
+
+{% endblock %}

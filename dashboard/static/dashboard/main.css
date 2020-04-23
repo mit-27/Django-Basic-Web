@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+.hcolor{
+  color: #0779e4;
+}
+
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.child {
+  border: 1px solid rgb(0, 132, 255);
+  padding: 5px;
+  margin: 20px;
+  color: white;
+  background-color: #0779e4;
+  border-radius: 6px;
+  transition: 0.5s ease;
+  text-align: left;
+}
+
+.child:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.btngrp,
+.msgcontainer {
+  justify-content: center;
+}
+
+.profileinfo {
+  text-align: center;
+}
+
+.profile {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.mainchild {
+  flex-grow: 1;
+}
+
+.content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 50%;
+  border: none;
+  padding: 10px;
+}
+
+.search-button {
+  background: #0ABDE3;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+.edb-button{
+  background-color: white;
+  color: #0779e4;
+}
+
+.edb-button:hover{
+  background-color: #0779e4;
+  color: white;
+}
+
+
+

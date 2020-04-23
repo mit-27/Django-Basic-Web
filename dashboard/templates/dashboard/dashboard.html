@@ -1,0 +1,41 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+<form class="search-form" method="GET" action="{% url 'dashboard' %}">
+    <input type="text" name="can-name" class="search-bar" placeholder="Search by Name">
+    <button class="search-button" type="submit">
+        Search
+    </button>
+</form>
+<div class="parent">
+
+{% if can_available %}
+<div class="container">
+    <h3>There is no Candidates Added</h3>
+
+</div>
+{% else %}
+{% for candidate in candidates  %}
+    <div class="child">
+        <p>Candidate Name: {{candidate.candidate_name}}</p>
+        <p>Candidate Job: {{candidate.candidate_job_title}}</p>
+        <p>Candidate Email: {{candidate.candidate_email}}</p>
+        <p>Candidate Phone: {{candidate.candidate_phone}}</p>
+
+        <div class="btngrp">
+            <button class="btn edb-button"
+                onclick="window.location.href='dashboard/{{candidate.candidate_id}}/update'">Edit</button>
+            <button class="btn edb-button"
+                onclick="window.location.href='dashboard/{{candidate.candidate_id}}/delete'">Delete</button>
+        </div>
+
+
+    </div>
+
+    {% endfor %}
+{% endif %}
+
+    
+
+</div>
+{% endblock content %}
