@@ -24,8 +24,30 @@ For this project i used mysql database and other different libraries so first yo
 ## Features
 
 1. New User can register, login, logout and also he/she can modify their profiles.
-<img src="Images/login.PNG" alt="Login">
 
+  * Register
+  
+    <img src="Images/register.PNG" alt="Register">
+    
+  * Login
+  
+    <img src="Images/login.PNG" alt="Login">
+    
+  * Profile
+  
+    <img src="Images/profile.PNG" alt="Profile">
+    
+  * Logout
+  
+    <img src="Images/logout.PNG" alt="Logouut">
 
 2. Each user can separetly manage their own candidates Data through Dashboard and Add candidate modules.
+
+  * Dashboard
+  
+    <img src="Images/dashboard.PNG" alt="Dashboard" >
+  
+  * Search by Candidate Name
+  
+    <img src="Images/search.PNG" alt="Search">
 
