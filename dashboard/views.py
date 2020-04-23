@@ -9,23 +9,26 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def dashboard_view(request):
-    candidates = []
+    candidates = Candidate.objects.filter(candidate_recruiter=request.user)
     no_can = False
-    can_name=""
     if request.method == "GET":
         can_name = request.GET.get("can-name")
         # print("Can Name:"+can_name)
-    if can_name != "":
+        if can_name == "":
             
-        candidates = Candidate.objects.filter(candidate_recruiter=request.user, candidate_name=can_name)
-    else:
-        candidates=Candidate.objects.filter(candidate_recruiter=request.user)
-               
+            candidates = Candidate.objects.filter(
+                candidate_recruiter=request.user)
             
+        else:
+   
+            candidates = Candidate.objects.filter(
+                candidate_recruiter=request.user, candidate_name=can_name)
     
+    if len(candidates)==0:
+        candidates = Candidate.objects.filter(candidate_recruiter=request.user)
 
     print(candidates)
-    if candidates.exists():
+    if len(candidates)!=0:
         no_can = False
     else:
         no_can=True
